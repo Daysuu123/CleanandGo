@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Satisfied Customer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="Satisfied.css">
+      <!-- Favicon -->
+      <link rel="icon" href="Pictures/Logo.png" type="image/x-icon">
+  <!-- Demo styles -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+    <header>
+      <a href="#" class="logo"><img src="Pictures/Logo2.png" alt="Clean n Go Logo"></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#about">About us</a>
+            <li><a href="Services.html">Service</a></li>
+            <li><a href="Satisfied Customer.html">Satisfied Customer</a></li>
+          </ul>
+        </nav>
+      </header>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 1.jpg" alt="Customer 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 2.jpg" alt="Customer 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 3.jpg" alt="Customer 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 4.webp" alt="Customer 4">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 5.jpg" alt="Customer 5">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 6.jpg" alt="Customer 6">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 7.jpeg" alt="Customer 7">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 8.jpeg" alt="Customer 8">
+      </div>
+      <div class="swiper-slide">
+        <img src="Pictures/Customer 9.jpg" alt="Customer 9">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="content-container">
+    <div class="content-box" id="content">
+      <h3>Rias Gremory</h3>
+      <p>Highschool Student</p>
+      <p>Rias has been a loyal customer for over five years. She appreciates the attention to detail and the friendly service provided by our team. Her favorite service is our premium home cleaning package, which keeps her house spotless and welcoming.</p>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var contentData = [
+      "<h3>Rias Gremory</h3><p>Highschool Student</p><p>Rias has been a loyal customer for over five years. She appreciates the attention to detail and the friendly service provided by our team. Her favorite service is our premium home cleaning package, which keeps her house spotless and welcoming.</p>",
+      "<h3>Elysia</h3><p>Prettiest Girl on Earth</p><p>Elysia loves our eco-friendly cleaning products that ensure her home is both clean and safe for her children.</p>",
+      "<h3>Caelus</h3><p>Galactic Baseballer</p><p>Caelus prefers our quick and efficient service, which fits perfectly into his busy schedule.</p>",
+      "<h3>Hiori Gotoh</h3><p>Highschool Student</p><p>Hitori appreciates our reliable and thorough cleaning, which gives her more time to focus on her music.</p>",
+      "<h3>Aisaka Taiga</h3><p>Highschool Student</p><p>Taiga values our attention to detail and how we always leave her home spotless and tidy.</p>",
+      "<h3>Raiden Ei</h3><p>Office Lady</p><p>Raiden enjoys our deep cleaning services that maintain the pristine condition of her home.</p>",
+      "<h3>Fujimiya Amane</h3><p>Highschool Student</p><p>Amane appreciates our flexible scheduling and the professionalism of our staff.</p>",
+      "<h3>Kiana Kaslana</h3><p>Valkyrie</p><p>Kiana loves our pet-friendly cleaning solutions that keep her home clean without harming her pets.</p>",
+      "<h3>Hinata Shoyo</h3><p>Highschool VolleyBall Player</p><p>Hinata is impressed by our efficient service and how we always exceed his expectations.</p>"
+    ];
+
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      on: {
+        slideChange: function () {
+          var content = document.getElementById("content");
+          content.innerHTML = contentData[swiper.activeIndex];
+        }
+      }
+    });
+    window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        document.querySelectorAll('nav ul li').forEach(function(item) {
+            item.addEventListener('mouseover', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+            item.addEventListener('mouseout', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+  </script>
+</body>
+
+</html>

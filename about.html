@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+        <!-- Favicon -->
+        <link rel="icon" href="Pictures/Logo.png" type="image/x-icon">
+    <title>Clean n Go - About Us</title>
+    <style>
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="Pictures/Logo2.png" alt="Clean n Go Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a>
+                <li><a href="Services.html">Service</a></li>
+                <li><a href="Satisfied Customer.html">Satisfied Customers</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <video autoplay muted loop class="background-video">
+        <source src="Videos/4205600-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="about-container">
+        <h3>About Us</h3>
+        <div>
+            <p>Welcome to Clean n Go, your trusted partner in professional cleaning services. Established in 2010, our mission is to provide top-notch cleaning solutions tailored to meet the unique needs of each client. Our team of dedicated and experienced professionals is committed to delivering exceptional service, ensuring your spaces are spotless and inviting. From residential homes to commercial offices, we utilize eco-friendly products and the latest cleaning technologies to achieve impeccable results. At Clean n Go, we pride ourselves on our attention to detail, reliability, and customer satisfaction. Let us take care of your cleaning needs so you can focus on what matters most to you. Experience the Clean n Go difference today!</p>
+        </div>
+    </div><br>
+
+    <div class="center-heading">
+        <h1 class="Staffs">Staff Members</h1>
+    </div>
+    <div class="staff-container">
+        <div class="staff-member">
+            <img src="Pictures/John Smith.avif" alt="John Smith">
+            <h4>John Smith</h4>
+            <p>Head of Operations</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/Emily.jpg" alt="Emily">
+            <h4>Emily Johnson</h4>
+            <p>Senior Cleaner</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/David.jpg" alt="">
+            <h4>David Martinez</h4>
+            <p>Cleaning Supervisor</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/Sarah.png" alt="">
+            <h4>Sarah Brown</h4>
+            <p>Customer Service Representative</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/Michael.webp" alt="">
+            <h4>Michael Clark</h4>
+            <p>Floor Technician</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/Jessica.jpg" alt="">
+            <h4>Jessica White</h4>
+            <p>Housekeeping Manager</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/Kevin.gif" alt="">
+            <h4>Kevin Rodriguez</h4>
+            <p>Window Cleaner</p>
+        </div>
+        <div class="staff-member">
+            <img src="Pictures/DUHONE.jpg" alt="">
+            <h4>Khyl "DUHONE" Arcilla</h4>
+            <p>Financial Adviser</p>
+        </div>
+    </div>
+    <h1>WE CLEAN WE GO!</h1>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        document.querySelectorAll('nav ul li').forEach(function(item) {
+            item.addEventListener('mouseover', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+            item.addEventListener('mouseout', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

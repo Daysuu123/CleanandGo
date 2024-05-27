@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean n Go</title>
+    <!-- Favicon -->
+    <link rel="icon" href="Pictures/Logo.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+ 
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="Pictures/Logo2.png" alt="Clean n Go Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="Services.html">Service</a></li>
+                <li><a href="Satisfied Customer.html">Satisfied Customer</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <video autoplay muted loop class="background-video">
+            <source src="Videos/4145631-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="banner-content">
+            <h3>Welcome to Clean n Go</h3>
+            <a href="about.html"><button>Learn More About Us</button></a>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="container">
+            <h2>Our Contacts</h2>
+            <p><i class="fa-regular fa-address-book"></i> <a href="tel:+639666741206" class="text-white text-decoration-none">+639666741206</a></p>
+            <p><i class="fa-brands fa-square-facebook"></i> <a href="https://www.facebook.com/Black.dacee" class="text-white text-decoration-none">Clean N Go</a></p>
+            <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/tfrdaysuu/" class="text-white text-decoration-none">Clean N Go</a></p>
+            <p><i class="fa-brands fa-square-x-twitter"></i> <a href="#" class="text-white text-decoration-none">@cleannngoooo</a></p>
+            <p><i class="fa-brands fa-tiktok"></i> <a href="#" class="text-white text-decoration-none">@cleanngo</a></p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        document.querySelectorAll('nav ul li').forEach(function(item) {
+            item.addEventListener('mouseover', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+            item.addEventListener('mouseout', function() {
+                var dropdown = this.querySelector('.aboutdrop');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
