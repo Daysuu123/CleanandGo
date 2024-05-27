@@ -293,7 +293,6 @@ header.sticky .logo img,
             padding: 20px;
             border-radius: 10px;
             margin: 120px auto 0;
-            box-shadow: 10px 10px 10px #20f0f0;
         }
         .about-container h3 {
             font-size: 50px;
@@ -317,19 +316,19 @@ header.sticky .logo img,
         }
         .service-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: flex;
             justify-content: center;
             margin-top: 40px;
-            max-width: 1000px;
+            width: 1000px;
             margin: 40px auto;
         }
 
         .services {
             width: 500px;
-            margin: 20px;
+            margin: 50px;
             text-align: center;
             background-color: hsl(0, 0%, 0%);
-            padding: 10px;
+            padding: 75px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -364,7 +363,6 @@ header.sticky .logo img,
             padding: 10px;
             padding-top: 30px;
             border-radius: 10px;
-            box-shadow: 10px 10px 10px #20f0f0;
             font-size: 50px;
             color: #fff; /* Set text color */
         }
